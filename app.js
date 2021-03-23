@@ -29,15 +29,12 @@ var app = new Vue({
             }
             this.todos.push({ id: Date.now(), title: value, completed: false });
             this.newTodo = '';
-            console.log(this.todos)
-            this.save()
-            
+            console.log(this.todos)  
         },
 
         removeTodo: function (todo) {
             var index = this.todos.indexOf(todo);
             this.todos.splice(index, 1);
-            this.save()
         },
         
         getTodos: function () {

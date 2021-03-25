@@ -1,1 +1,14 @@
 node_modules/
+selenium/build/tmp/compileTestJava/source-classes-mapping.txt
+selenium/.idea/.name
+selenium/.gradle/checksums/checksums.lock
+selenium/.gradle/buildOutputCleanup/outputFiles.bin
+selenium/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+selenium/.gradle/6.7/javaCompile/taskHistory.bin
+selenium/.gradle/6.7/javaCompile/javaCompile.lock
+selenium/.gradle/6.7/fileHashes/fileHashes.lock
+selenium/.gradle/6.7/fileHashes/fileHashes.bin
+selenium/.gradle/6.7/fileChanges/last-build.bin
+selenium/.gradle/6.7/executionHistory/executionHistory.lock
+selenium/.gradle/6.7/executionHistory/executionHistory.bin
+selenium/gradlew

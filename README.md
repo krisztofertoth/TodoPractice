@@ -3,6 +3,8 @@ Ez a Todo app vue js.-ben készült a todomvc vue js. tutorial felhasználásáv
 
 Az alkamzás elindításához szükség van a Node.js-re.
 
+Végső alkalmazás eléréséhez a todosapira és vuefrontendre van szükségünk.
+
 Az elinditáshoz telepíteni kell az alkalmazást, amelyet az `npm install` parancsal tehetünk meg.
 
 Telepítés után az `npm run serve` paracsal indítható.

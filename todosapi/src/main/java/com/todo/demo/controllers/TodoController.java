@@ -14,7 +14,7 @@ import java.util.List;
 
 @CrossOrigin(origins = "*", maxAge = 3600)
 @RestController
-@RequestMapping("/api/todos/")
+@RequestMapping("/todos")
 public class TodoController {
 
     @Autowired
@@ -24,7 +24,7 @@ public class TodoController {
 
 
 
-    @GetMapping("all")
+    @GetMapping()
     @PreAuthorize("hasRole('USER') or hasRole('MODERATOR') or hasRole('ADMIN')")
     public List<Todo> getTodos(){
         return todoRepository.findAll();

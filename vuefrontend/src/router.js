@@ -22,11 +22,6 @@ export const router = new Router({
       component: Register
     },
     {
-      path: '/profile',
-      name: 'profile',
-      component: () => import('./views/Profile.vue')
-    },
-    {
       path: '/todos',
       name: 'todos',
       component: () => import('./views/Todos.vue')

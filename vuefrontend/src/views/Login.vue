@@ -6,6 +6,7 @@
         src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
         class="profile-img-card"
       />
+      <a @click="github()" href="http://localhost:8080/oauth2/authorization/github">Login with Github</a>
       <form name="form" @submit.prevent="handleLogin">
         <div class="form-group">
           <label for="username">Username</label>
@@ -42,6 +43,9 @@
             <span v-show="loading" class="spinner-border spinner-border-sm"></span>
             <span>Login</span>
           </button>
+          <router-link to="/register" class="nav-link">
+            <font-awesome-icon icon="user-plus" />Sign Up
+          </router-link>
         </div>
         <div class="form-group">
           <div v-if="message" class="alert alert-danger" role="alert">{{message}}</div>
@@ -70,7 +74,7 @@ export default {
   },
   created() {
     if (this.loggedIn) {
-      this.$router.push('/profile');
+      this.$router.push('/todos');
     }
   },
   methods: {
@@ -85,7 +89,7 @@ export default {
         if (this.user.username && this.user.password) {
           this.$store.dispatch('auth/login', this.user).then(
             () => {
-              this.$router.push('/profile');
+              this.$router.push('/todos');
             },
             error => {
               this.loading = false;
@@ -97,6 +101,9 @@ export default {
           );
         }
       });
+    },
+    github(){
+      this.loggedIn = "githubUser"
     }
   }
 };

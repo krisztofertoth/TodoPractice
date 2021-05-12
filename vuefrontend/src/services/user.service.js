@@ -1,12 +1,12 @@
 import axios from 'axios';
 import authHeader from './auth-header';
 
-const API_URL = 'http://localhost:8080/api/todos/';
+const API_URL = 'http://localhost:8080/todos/';
 
 class UserService {
 
   getUserBoard() {
-    return axios.get(API_URL+"all", { headers: authHeader() });
+    return axios.get(API_URL, { headers: authHeader() });
   }
   postTodo(todoText){
     return axios.post(API_URL+"add",{

@@ -2,6 +2,9 @@
   <div class="container">
     <header class="jumbotron">
       <h3>Todos</h3>
+       <a class="nav-link" href @click.prevent="logOut">
+            <font-awesome-icon icon="sign-out-alt" />LogOut
+          </a>
     </header>
     <form>
       <div class="form-group">
@@ -11,7 +14,7 @@
     </form>
     <div v-for="todo in content" :key="todo.id">
       <button class="btn-primary" type="submit" :id="todo.id" @click="changeCompleted($event)">Done</button>
-      <input class="form" :class="todo.completed && 'completed'" @keydown.enter="edit($event)" :disabled="!(isAdmin || isModerator)" type="text" :value="todo.text" :id="todo.id">
+      <input class="form" :class="todo.completed && 'completed'" @keydown.enter="edit($event)" @keydown.delete="deleteTodo($event)" :disabled="!(isAdmin || isModerator)" type="text" :value="todo.text" :id="todo.id">
       <button class="btn-primary" type="submit" :disabled="!(isAdmin)" :id="todo.id" @click="deleteTodo($event)">X</button>
     </div>
   </div>
@@ -70,8 +73,11 @@ export default {
     },
     reloadPage(){
       window.location.reload();
+    },
+    logOut() {
+      this.$store.dispatch('auth/logout');
+      this.$router.push('/login');
     }
-    
   },
   mounted() {
     UserService.getUserBoard().then(

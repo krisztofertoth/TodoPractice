@@ -2,6 +2,7 @@ package com.todo.demo.security;
 
 import com.todo.demo.security.jwt.AuthEntryPointJwt;
 import com.todo.demo.security.jwt.AuthTokenFilter;
+import com.todo.demo.security.oauth2.OauthLoginSuccesHandler;
 import com.todo.demo.security.services.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -24,6 +25,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private AuthEntryPointJwt unauthorizedHandler;
+
+    @Autowired
+    private OauthLoginSuccesHandler loginSuccesHandler;
 
     @Bean
     public AuthTokenFilter authenticationJwtTokenFilter() {
@@ -51,9 +55,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors().and().csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-                .authorizeRequests().antMatchers("/api/auth/**").permitAll()
-                .antMatchers("/api/todos/**").permitAll()
-                .anyRequest().authenticated();
+                .authorizeRequests().antMatchers("/api/auth/**","oauth2/**","/todos/**").permitAll()
+                .anyRequest().authenticated()
+                .and().oauth2Login().successHandler(loginSuccesHandler);
 
         http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
     }

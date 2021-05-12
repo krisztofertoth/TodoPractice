@@ -52,6 +52,9 @@
           </div>
           <div class="form-group">
             <button class="btn btn-primary btn-block">Sign Up</button>
+            <router-link to="/login" class="nav-link">
+            <font-awesome-icon icon="sign-in-alt" />Login
+          </router-link>
           </div>
         </div>
       </form>

@@ -18,6 +18,8 @@ Végső alkalmazás eléréséhez a todosapira és vuefrontendre van szükségü
 
 - Telepíteni kell az alkalmazást, amelyet az `npm install` parancsal tehetünk meg.
 - Telepítés után az `npm run serve` paracsal indítható.
+- El kell indítani a springes applikációt is.
+- MySQL szerver indítása is szükséges (paraméterek az application.propertiesben állíthatóak be)
 
 Képek és funkciók az indulás után [Képek](https://github.com/krisztofertoth/TodoPractice/tree/master/todosapi)
 

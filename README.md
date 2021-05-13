@@ -20,6 +20,8 @@ Végső alkalmazás eléréséhez a todosapira és vuefrontendre van szükségü
 
 Képek és funkciók az indulás után [Képek](https://github.com/krisztofertoth/TodoPractice/tree/master/todosapi)
 
+A képek seleniummal lettek autogenerálva, mely a todosapi/src/test/java/com/todo/demo helyen található.
+
 Az alkalmazás a http://localhost:8081 indul el.
 
 Az alkamazás backendje egy spring boot applikáció, melynek a build toolja a gradle(todosapi).

@@ -1,5 +1,6 @@
 package com.todo.demo;
 
+import com.todo.demo.seleniumhelper.Screenshot;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -10,40 +11,38 @@ import java.io.IOException;
 
 public class SeleniumScreesnshots {
 
-    static void screenshot(String screenshotname, WebDriver driver) throws IOException {
-        File srcFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-        FileUtils.copyFile(srcFile, new File(screenshotname));
-    }
+
 
     public static void main(String[] args) throws IOException{
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         String projectPath = System.getProperty("user.dir");
         String screenshotsLocation = projectPath+"\\screenshots";
+        Screenshot screenshot = new Screenshot(screenshotsLocation,driver);
         try {
             driver.get("http://localhost:8081");
             WebElement userName = driver.findElement(new By.ByXPath("//div[1]/input[@class='form-control' and 1]"));
             WebElement password = driver.findElement(new By.ByXPath("//div[2]/input[@class='form-control' and 1]"));
             WebElement login = driver.findElement(new By.ByXPath("//button"));
-            screenshot(screenshotsLocation+"\\loginview.jpg",driver);
+            screenshot.takescreenshot("\\loginview.jpg");
             userName.sendKeys("Test");
             password.sendKeys("test123");
             login.click();
-            screenshot(screenshotsLocation+"\\todosview.jpg",driver);
+            screenshot.takescreenshot("\\todosview.jpg");
             WebElement todoCreate = driver.findElement(new By.ByXPath("//div[@class='form-group']/input[1]"));
             todoCreate.sendKeys("SeleniumTest");
-            screenshot(screenshotsLocation + "\\create.jpg", driver);
+            screenshot.takescreenshot("\\create.jpg");
             WebElement add = driver.findElement(new By.ByXPath("//div[@class='form-group']/button[1]"));
             add.click();
-            screenshot(screenshotsLocation + "\\created.jpg", driver);
+            screenshot.takescreenshot("\\created.jpg");
             WebElement done = driver.findElement(new By.ByXPath("//button[@class='btn-primary' and 1 and text()='Done' and @id='1']"));
             done.click();
-            screenshot(screenshotsLocation+"\\completed.jpg",driver);
+            screenshot.takescreenshot("\\completed.jpg");
             WebElement logout = driver.findElement(new By.ByXPath("//a"));
             logout.click();
             WebElement register = driver.findElement(new By.ByXPath("//a[@class='nav-link']"));
             register.click();
-            screenshot(screenshotsLocation+"\\registerview.jpg",driver);
+            screenshot.takescreenshot("\\registerview.jpg");
         }finally {
             driver.close();
             driver.quit();

@@ -24,7 +24,7 @@ Végső alkalmazás eléréséhez a todosapira és vuefrontendre van szükségü
 - El kell indítani a springes applikációt is.
 - MySQL szerver indítása is szükséges (paraméterek az application.propertiesben állíthatóak be)
 
-Képek és funkciók az indulás után [Képek](https://github.com/krisztofertoth/TodoPractice/tree/master/todosapi)
+Képek és funkciók az indulás után [User jogosultsággal](https://github.com/krisztofertoth/TodoPractice/tree/master/todosapi)
 
 A képek seleniummal lettek autogenerálva, mely a todosapi/src/test/java/com/todo/demo helyen található.
 

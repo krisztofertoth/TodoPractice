@@ -3,7 +3,10 @@ Ez a Todo app vue js.-ben készült a todomvc vue js. tutorial felhasználásáv
 
 Végső alkalmazás eléréséhez a todosapira és vuefrontendre van szükségünk.
 
-### Előkászületek
+### Alkalmazásról
+- Java spring backenddel rendelkezik és vue.js frontenddel, lehetőség van egy közös todo listát szerkeszteni authentikáció után.
+
+### Előkészületek
 
 - Az alkamzás elindításához szükség van a Node.js-re.
 - Java 8

@@ -7,13 +7,16 @@ Végső alkalmazás eléréséhez a todosapira és vuefrontendre van szükségü
 
 - Az alkamzás elindításához szükség van a Node.js-re.
 - Java 8
+- Szükséges fájlok a repoból 
+    - todosapi
+    - vuefrontend
 - Visual Studio Code ajánlot
 - Intellij ajánlott
 
+### Inditás
 
-Az elinditáshoz telepíteni kell az alkalmazást, amelyet az `npm install` parancsal tehetünk meg.
-
-Telepítés után az `npm run serve` paracsal indítható.
+- Telepíteni kell az alkalmazást, amelyet az `npm install` parancsal tehetünk meg.
+- Telepítés után az `npm run serve` paracsal indítható.
 
 Képek és funkciók az indulás után [Képek](https://github.com/krisztofertoth/TodoPractice/tree/master/todosapi)
 

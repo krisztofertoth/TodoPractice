@@ -1,9 +1,15 @@
 # TodoPractice
 Ez a Todo app vue js.-ben készült a todomvc vue js. tutorial felhasználásával. Ez csak a gyakorlást szolgálja.
 
-Az alkamzás elindításához szükség van a Node.js-re.
-
 Végső alkalmazás eléréséhez a todosapira és vuefrontendre van szükségünk.
+
+### Előkászületek
+
+- Az alkamzás elindításához szükség van a Node.js-re.
+- Java 8
+- Visual Studio Code ajánlot
+- Intellij ajánlott
+
 
 Az elinditáshoz telepíteni kell az alkalmazást, amelyet az `npm install` parancsal tehetünk meg.
 

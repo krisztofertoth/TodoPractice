@@ -15,6 +15,8 @@ Az elinditáshoz telepíteni kell az alkalmazást, amelyet az `npm install` para
 
 Telepítés után az `npm run serve` paracsal indítható.
 
+Képek és funkciók az indulás után [Képek](https://github.com/krisztofertoth/TodoPractice/tree/master/todosapi)
+
 Az alkalmazás a http://localhost:8081 indul el.
 
 Az alkamazás backendje egy spring boot applikáció, melynek a build toolja a gradle(todosapi).

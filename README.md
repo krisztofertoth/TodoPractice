@@ -34,4 +34,4 @@ Az alkamazás backendje egy spring boot applikáció, melynek a build toolja a g
 
 A frontend pedig egy vue.js alkalmazás(vuefrontend).
 
-Az alkamazás használ még egy MySQL servert, amely a perzisztenciáért felelős.
+Az alkamazás használ még egy MySQL servert, amely az adatok tárolásáért felelős.

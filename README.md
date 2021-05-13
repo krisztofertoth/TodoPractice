@@ -7,6 +7,7 @@ Végső alkalmazás eléréséhez a todosapira és vuefrontendre van szükségü
 
 - Az alkamzás elindításához szükség van a Node.js-re.
 - Java 8
+- Gradle
 - Szükséges fájlok a repoból 
     - todosapi
     - vuefrontend
